@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Illyrian Care Hospital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="med-departments.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header>
+  <nav class="navbar">
+    <div class="brand">
+        <img src="images/logo.png" alt="Illyrian Care Hospital Logo" class="logo-img">
+        <div class="logo-text">Illyrian Care Hospital</div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="departments.html" class="active" data-en="Medical Departments" data-es="Departamentos Médicos">Medical Departments</a></li>
+        <li><a href="staff.html" data-en="Staff & Doctors" data-es="Personal y Médicos">Staff & Doctors</a></li>
+        <li><a href="ourimpact.html" data-en="Our Impact" data-es="Nuestro Impacto">Our Impact</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li id="login-item">
+            <a href="login.html" class="profile-btn">
+                <img src="images/profile.jpg" alt="Profile" class="profile-icon"></a></li>
+        <li>
+            <a href="#" onclick="translatePage(currentLang === 'en' ? 'es' : 'en')">
+                <img id="lang-flag" src="images/spanish.png" alt="Flag" style="width:20px; height:15px; margin-right:5px;">
+                <span id="lang-btn" data-en="Español" data-es="English">Español</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+</header>
+
+<br><br>
+
+<section class="dept-hero">
+    <div class="dept-hero-inner">
+        <h1 data-en="Our Medical Departments" data-es="Nuestros Departamentos Médicos">Our Medical Departments</h1>
+        <p data-en="Expert care across a wide range of specialties." data-es="Atención experta en una amplia gama de especialidades.">Expert care across a wide range of specialties.</p>
+    </div>
+</section>
+
+<!-- DEPARTMENTS GRID -->
+<section class="departments-section">
+    <div class="departments-grid">
+
+        <div class="department-card">
+            <img src="images/allergology.jpg" alt="">
+            <h3 data-en="Allergology" data-es="Alergología">Allergology</h3>
+            <p data-en="Diagnosis and treatment of allergies and immune system conditions." data-es="Diagnóstico y tratamiento de alergias y trastornos del sistema inmunológico.">Diagnosis and treatment of allergies and immune system conditions.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/anatomopathatology.jpg" alt="">
+            <h3 data-en="Anatomopathology" data-es="Anatomía Patológica">Anatomopathology</h3>
+            <p data-en="Diagnosis of diseases through the study of tissues and cells." data-es="Diagnóstico de enfermedades mediante el estudio de tejidos y células.">Diagnosis of diseases through the study of tissues and cells.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/cardiology.jpg" alt="">
+            <h3 data-en="Cardiology" data-es="Cardiología">Cardiology</h3>
+            <p data-en="Thorough heart care including diagnostics, treatment, and prevention." data-es="Atención integral del corazón que incluye diagnóstico, tratamiento y prevención.">Thorough heart care including diagnostics, treatment, and prevention.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/checkup.jpg" alt="">
+            <h3 data-en="Check Up" data-es="Chequeo Médico">Check Up</h3>
+            <p data-en="A full health evaluation to detect issues early and support long-term wellness." data-es="Una evaluación completa de salud para detectar problemas a tiempo y promover el bienestar a largo plazo.">A full health evaluation to detect issues early and support long-term wellness.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/dermatology.png" alt="">
+            <h3 data-en="Dermatology" data-es="Dermatología">Dermatology</h3>
+            <p data-en="Expert care for skin, hair, and nail conditions." data-es="Atención experta para afecciones de la piel, el cabello y las uñas.">Expert care for skin, hair, and nail conditions.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/endocrinology.jpeg" alt="">
+            <h3 data-en="Endocrinology" data-es="Endocrinología">Endocrinology</h3>
+            <p data-en="Care for hormone-related conditions involving thyroid, metabolism, and growth." data-es="Atención para trastornos hormonales relacionados con la tiroides, el metabolismo y el crecimiento.">Care for hormone-related conditions involving thyroid, metabolism, and growth.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/gastroenterology.jpg" alt="">
+            <h3 data-en="Gastroenterology" data-es="Gastroenterología">Gastroenterology</h3>
+            <p data-en="Treatment for digestive system concerns affecting the stomach, liver, and intestines." data-es="Tratamiento de problemas digestivos que afectan el estómago, el hígado y los intestinos.">Treatment for digestive system concerns affecting the stomach, liver, and intestines.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/gynecology.jpg" alt="">
+            <h3 data-en="Gynecology" data-es="Ginecología">Gynecology</h3>
+            <p data-en="Comprehensive women’s health and reproductive care." data-es="Atención integral para la salud y el bienestar reproductivo de la mujer.">Comprehensive women’s health and reproductive care.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/hematology.jpg" alt="">
+            <h3 data-en="Hematology" data-es="Hematología">Hematology</h3>
+            <p data-en="Specialized care for conditions that affect the blood." data-es="Atención especializada para afecciones que afectan la sangre.">Specialized care for conditions that affect the blood.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/laboratory.jpeg" alt="">
+            <h3 data-en="Laboratory Services" data-es="Servicios de Laboratorio">Laboratory Services</h3>
+            <p data-en="Reliable medical testing that supports accurate and timely diagnosis." data-es="Pruebas médicas confiables que permiten diagnósticos precisos y oportunos.">Reliable medical testing that supports accurate and timely diagnosis.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/neurology.jpeg" alt="">
+            <h3 data-en="Neurology" data-es="Neurología">Neurology</h3>
+            <p data-en="Treatment for brain, nerve, and spinal disorders." data-es="Tratamiento de trastornos cerebrales, nerviosos y espinales.">Treatment for brain, nerve, and spinal disorders.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/ophthalmology.jpg" alt="">
+            <h3 data-en="Ophthalmology" data-es="Oftalmología">Ophthalmology</h3>
+            <p data-en="Comprehensive care for eye health, vision issues, and related conditions." data-es="Atención integral para la salud ocular, problemas de visión y condiciones relacionadas.">Comprehensive care for eye health, vision issues, and related conditions.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/orthopedics.jpeg" alt="">
+            <h3 data-en="Orthopedics" data-es="Ortopedia">Orthopedics</h3>
+            <p data-en="Advanced care for bone, muscle, and joint conditions." data-es="Atención avanzada para afecciones de huesos, músculos y articulaciones.">Advanced care for bone, muscle, and joint conditions.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/pediatrics.jpg" alt="">
+            <h3 data-en="Pediatrics" data-es="Pediatría">Pediatrics</h3>
+            <p data-en="Specialized child-focused care from newborns to teens." data-es="Atención especializada para niños, desde recién nacidos hasta adolescentes.">Specialized child-focused care from newborns to teens.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/pneumology.jpg" alt="">
+            <h3 data-en="Pneumology" data-es="Neumología">Pneumology</h3>
+            <p data-en="Medical support for lung and breathing conditions such as asthma and infections." data-es="Atención médica para afecciones pulmonares y respiratorias como el asma y las infecciones.">Medical support for lung and breathing conditions such as asthma and infections.</p>
+        </div>
+
+        <div class="department-card">
+            <img src="images/rheumatology.jpg" alt="">
+            <h3 data-en="Rheumatology" data-es="Reumatología">Rheumatology</h3>
+            <p data-en="Focused care for joint, muscle, and autoimmune conditions." data-es="Atención enfocada en trastornos articulares, musculares y autoinmunes.">Focused care for joint, muscle, and autoimmune conditions.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p data-en="© 2025 Illyrian Care Hospital. All rights reserved." data-es="© 2025 Hospital Illyrian Care. Todos los derechos reservados.">&copy; 2025 Illyrian Care Hospital. All rights reserved.</p>
+        <p data-en="Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com" data-es="Dirección: 742 Evergreen Lane | Teléfono: (832)-123-4567 | Correo: illyriancarehospital@gmail.com">Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com</p>
+        <ul class="social-links">
+            <li><a href="#" data-en="Facebook" data-es="Facebook">Facebook</a></li>
+            <li><a href="#" data-en="Instagram" data-es="Instagram">Instagram</a></li>
+            <li><a href="#" data-en="LinkedIn" data-es="LinkedIn">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+let user = localStorage.getItem("currentUser");
+
+if (user) {
+    document.getElementById("login-item").style.display = "none";
+
+    let userItem = document.getElementById("user-item");
+    let userName = document.getElementById("user-name");
+
+    userItem.style.display = "block";
+    userName.innerText = "👤 " + user;
+}
+</script>
+</body>
+</html>

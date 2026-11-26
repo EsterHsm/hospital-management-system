@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Illyrian Care Hospital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="brand">
+        <img src="images/logo.png" alt="Illyrian Care Hospital Logo" class="logo-img">
+        <div class="logo-text">Illyrian Care Hospital</div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" class="active" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="departments.html" data-en="Medical Departments" data-es="Departamentos Médicos">Medical Departments</a></li>
+        <li><a href="staff.html" data-en="Staff & Doctors" data-es="Personal y Médicos">Staff & Doctors</a></li>
+        <li><a href="ourimpact.html" data-en="Our Impact" data-es="Nuestro Impacto">Our Impact</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li id="login-item">
+            <a href="login.html" class="profile-btn">
+                <img src="images/profile.jpg" alt="Profile" class="profile-icon"></a></li>
+
+<!-- USER DROPDOWN (when logged in) -->
+        <li id="user-item" class="user-dropdown" style="display:none;">
+    
+            <a href="portal.html" id="user-name" class="user-name"></a>
+
+            <div class="dropdown-content">
+                <a href="portal.html">My Profile</a>
+                <a href="#" id="logout-btn">Logout</a>
+            </div>
+
+            </li>
+
+        <li id="user-item" style="display: none;">
+            <a href="portal.html" id="user-name"></a>
+        </li>
+
+        <li>
+            <a href="#" onclick="translatePage(currentLang === 'en' ? 'es' : 'en')">
+                <img id="lang-flag" src="images/spanish.png" alt="Flag" style="width:20px; height:15px; margin-right:5px;">
+                <span id="lang-btn" data-en="Español" data-es="English">Español</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay">
+        <h1 data-en="Welcome to Illyrian Care Hospital" data-es="Bienvenido al Hospital Illyrian Care">Welcome to Illyrian Care Hospital</h1>
+        <p data-en="Where innovative treatments and caring professionals work hand in hand to guide you toward a healthier future." 
+           data-es="Donde los tratamientos innovadores y los profesionales atentos trabajan juntos para guiarle hacia un futuro más saludable.">
+           Where innovative treatments and caring professionals work hand in hand to guide you toward a healthier future.
+        </p>
+        <a href="https://forms.office.com/r/GwCc8c94mN?origin=lprLink" class="btn btn-primary" target="_blank" 
+           data-en="Book an Appointment" data-es="Reservar una Cita">Book an Appointment</a>
+    </div>
+</section>
+
+<!-- Quick Shortcuts -->
+<section class="quick-shortcuts">
+    <h2 data-en="Quick Services" data-es="Servicios Rápidos">Quick Services</h2>
+    <div class="cards">
+        <div class="card"><a href="#"><img src="images/emergency-icon.jpg" alt=""><h3 data-en="Emergency & Trauma" data-es="Emergencia y Trauma">Emergency & Trauma</h3></a></div>
+        <div class="card"><a href="#"><img src="images/doctor-icon.jpg" alt=""><h3 data-en="Physician Assistance" data-es="Asistencia Médica">Physician Assistance</h3></a></div>
+        <div class="card"><a href="#"><img src="images/billing-icon.jpg" alt=""><h3 data-en="Billing & Insurance" data-es="Facturación y Seguros">Billing & Insurance</h3></a></div>
+        <div class="card"><a href="#"><img src="images/pharmacy-icon.jpg" alt=""><h3 data-en="Pharmacy Services" data-es="Servicios de Farmacia">Pharmacy Services</h3></a></div>
+        <div class="card"><a href="#"><img src="images/health-icon.jpg" alt=""><h3 data-en="Health Information" data-es="Información de Salud">Health Information</h3></a></div>
+    </div>
+</section>
+
+<!-- News & Updates -->
+<section class="news-updates">
+    <h2 data-en="Latest News & Health Updates" data-es="Últimas Noticias y Actualizaciones de Salud">Latest News & Health Updates</h2>
+    <div class="news-cards">
+
+        <article class="news-card">
+            <img src="images/may.jpg" alt="">
+            <h3><a href="#" data-en="Mental Health Awareness Month" data-es="Mes de Concientización sobre la Salud Mental">Mental Health Awareness Month</a></h3>
+            <p data-en="Join us this May for Mental Health Awareness Month and learn the importance of mental well-being. Take steps toward a more balanced, healthier life." 
+             data-es="Únete a nosotros este mayo para el Mes de la Concientización sobre la Salud Mental y aprende sobre la importancia del bienestar mental. Da pasos hacia una vida más equilibrada y saludable.">
+            Join us this May for Mental Health Awareness Month and learn the importance of mental well-being. Take steps toward a more balanced, healthier life.
+            </p>
+        </article>
+
+        <article class="news-card">
+            <img src="images/vaccine.jpg" alt="">
+            <h3><a href="#" data-en="Why Vaccines Still Matter" data-es="Por Qué las Vacunas Siguen Siendo Importantes">Why Vaccines Still Matter</a></h3>
+            <p data-en="Get Vaccinated, Stay Protected: Health Starts with Prevention." 
+               data-es="Vacúnese, Manténgase Protegido: La Salud Comienza con la Prevención.">
+               Get Vaccinated, Stay Protected: Health Starts with Prevention.
+            </p>
+        </article>
+
+        <article class="news-card">
+            <img src="images/blood donation.jpeg" alt="">
+            <h3><a href="#" data-en="Donate Blood, Save Lives" data-es="Dona sangre, salva vidas.">Donate Blood, Save Lives</a></h3>
+            <p data-en="Safe blood is always needed. A few minutes of your time can give someone a second chance at life." 
+               data-es="Siempre se necesita sangre segura. Unos minutos de tu tiempo pueden darle a alguien una segunda oportunidad de vida.">
+               Safe blood is always needed. A few minutes of your time can give someone a second chance at life.
+            </p>
+        </article>
+
+    </div>
+</section>
+
+<!-- Featured Departments -->
+<section class="featured-departments">
+    <h2 data-en="Our Specialties" data-es="Nuestras Especialidades">Our Specialties</h2>
+    <div class="dept-cards">
+        <div class="dept-card"><img src="images/cardiology.jpg" alt=""><h3 data-en="Cardiology" data-es="Cardiología">Cardiology</h3></div>
+        <div class="dept-card"><img src="images/orthopedics.jpeg" alt=""><h3 data-en="Orthopedics" data-es="Ortopedia">Orthopedics</h3></div>
+        <div class="dept-card"><img src="images/pediatrics.jpg" alt=""><h3 data-en="Pediatrics" data-es="Pediatría">Pediatrics</h3></div>
+        <div class="dept-card"><img src="images/allergology.jpg" alt=""><h3 data-en="Allergology" data-es="Alergología">Allergology</h3></div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="why-choose-us">
+    <h2 data-en="Why Choose Illyrian Care Hospital?" data-es="¿Por Qué Elegir el Hospital Illyrian Care?">Why Choose Illyrian Care Hospital?</h2>
+
+        <p 
+        class="trust-line"
+        data-en="Accredited • Trusted • Patient-Centered Care"
+        data-es="Acreditado • Confiable • Atención Centrada en el Paciente">
+        Accredited • Trusted • Patient-Centered Care
+        </p>
+
+    <ul class="features">
+        <li 
+        data-en="Proven Excellence: Trusted by over 215,000+ patients with a 94% overall treatment success rate and 97% surgical success rate."
+        data-es="Excelencia Comprobada: Más de 215,000 pacientes confían en nosotros, con una tasa de éxito del 94% en tratamientos y 97% en cirugías.">
+        <strong>Proven Excellence:</strong> Trusted by over 215,000+ patients with a 94% overall treatment success rate.
+        </li>
+
+        <li 
+        data-en="Advanced Facilities: A modern hospital with 820 beds and cutting-edge medical technology."
+        data-es="Instalaciones Avanzadas: Un hospital moderno con 820 camas y tecnología médica de última generación.">
+        <strong>Advanced Facilities:</strong> A modern hospital with 
+        820 beds and cutting-edge medical technology.
+        </li>
+
+        <li 
+        data-en="High Patient Volume & Trust: Serving 1.9 million outpatient visits and 148,000 emergency cases annually."
+        data-es="Alto Volumen y Confianza: Atendemos 1.9 millones de consultas ambulatorias y 148,000 casos de emergencia al año.">
+        <strong>High Patient Volume & Trust:</strong> Serving 1.9 million outpatient visits and 148,000 emergency cases annually.
+        </li>
+
+    </ul>
+</section>
+
+<section class="reviews-section">
+    <h2 data-en="What Our Patients Say" data-es="Lo que dicen nuestros pacientes">What Our Patients Say</h2>
+
+    <div id="reviewsContainer"></div>
+
+    <h3 data-en="Leave a Review" data-es="Deja una Reseña">Leave a Review</h3>
+
+<form id="reviewForm">
+    <input 
+        type="text" 
+        id="name" 
+        placeholder="Your Name" 
+        data-en-placeholder="Your Name"
+        data-es-placeholder="Tu Nombre"
+        required
+    >
+
+    <select id="rating" required>
+        <option value="" data-en="Rating" data-es="Calificación">Rating</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="3">⭐⭐⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="1">⭐</option>
+    </select>
+
+    <textarea 
+        id="comment" 
+        placeholder="Your review..." 
+        data-en-placeholder="Your review..."
+        data-es-placeholder="Tu reseña..."
+        required
+    ></textarea>
+
+    <button 
+        type="submit"
+        data-en="Submit Review"
+        data-es="Enviar Reseña"
+    >
+        Submit Review
+    </button>
+</form>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p data-en="© 2025 Illyrian Care Hospital. All rights reserved." data-es="© 2025 Hospital Illyrian Care. Todos los derechos reservados.">&copy; 2025 Illyrian Care Hospital. All rights reserved.</p>
+        <p data-en="Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com" 
+           data-es="Dirección: 742 Evergreen Lane | Teléfono: (832)-123-4567 | Correo: illyriancarehospital@gmail.com">
+           Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com
+        </p>
+        <ul class="social-links">
+            <li><a href="#" data-en="Facebook" data-es="Facebook">Facebook</a></li>
+            <li><a href="#" data-en="Instagram" data-es="Instagram">Instagram</a></li>
+            <li><a href="#" data-en="LinkedIn" data-es="LinkedIn">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+<script>
+let user = localStorage.getItem("currentUser");
+
+if (user) {
+    document.getElementById("login-item").style.display = "none";
+
+    let userItem = document.getElementById("user-item");
+    let userName = document.getElementById("user-name");
+
+    userItem.style.display = "block";
+    userName.innerText = "👤 " + user;
+}
+</script>
+
+
+
+</body>
+</html>

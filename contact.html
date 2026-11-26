@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Illyrian Care Hospital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contacts.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+  <style>
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .contact-form {
+      flex: 1 1 400px;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .contact-form h2 {
+      margin-bottom: 1rem;
+      color: #003366;
+    }
+    .contact-form label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 500;
+    }
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      background-color: paleturquoise;
+      color: #003366;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .contact-image {
+      flex: 1 1 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-image img {
+      max-width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .contact-info {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      background: #f7f9fc;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .contact-info h3 {
+      color: #003366;
+      margin-bottom: 1rem;
+    }
+    .contact-info p {
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+    }
+  </style>
+</head>
+
+<body>
+ <header>
+  <nav class="navbar">
+    <div class="brand">
+        <img src="images/logo.png" alt="Illyrian Care Hospital Logo" class="logo-img">
+        <div class="logo-text">Illyrian Care Hospital</div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="departments.html" data-en="Medical Departments" data-es="Departamentos Médicos">Medical Departments</a></li>
+        <li><a href="staff.html" data-en="Staff & Doctors" data-es="Personal y Médicos">Staff & Doctors</a></li>
+        <li><a href="ourimpact.html" data-en="Our Impact" data-es="Nuestro Impacto">Our Impact</a></li>
+        <li><a href="contact.html" class="active" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li id="login-item">
+            <a href="login.html" class="profile-btn">
+                <img src="images/profile.jpg" alt="Profile" class="profile-icon"></a></li>
+        <li>
+            <a href="#" onclick="translatePage(currentLang === 'en' ? 'es' : 'en')">
+                <img id="lang-flag" src="images/spanish.png" alt="Flag" style="width:20px; height:15px; margin-right:5px;">
+                <span id="lang-btn" data-en="Español" data-es="English">Español</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+</header>
+
+  <section class="contact-container">
+    <div class="contact-form">
+      <h2 data-en="Contact Us" data-es="Contáctenos">Contact Us</h2>
+
+      <div id="successMessage" class="success-message" style="display:none;" data-en="✅ Your message has been sent successfully!" data-es="✅ ¡Su mensaje ha sido enviado con éxito!">
+      ✅ Your message has been sent successfully!
+      </div>
+
+      <form id="contactForm" action="#" method="post">
+        <label for="firstName" data-en="First Name *" data-es="Nombre *">First Name *</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName" data-en="Last Name *" data-es="Apellido *">Last Name *</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email" data-en="Email *" data-es="Correo Electrónico *">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone" data-en="Phone Number *" data-es="Número de Teléfono *">Phone Number *</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <br><br>
+
+        <label for="message" data-en="Message / Inquiry" data-es="Mensaje / Consulta">Message / Inquiry</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+
+        <button type="submit" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
+      </form>
+    </div>
+
+    <div class="contact-image">
+      <img src="images/hospital-building.jpg" alt="Hospital Contact">
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js" integrity="sha512-…" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    const phoneInput = document.querySelector("#phone");
+    window.intlTelInput(phoneInput, {
+      initialCountry: "auto",
+      geoIpLookup: function(callback) {
+        fetch('https://ipinfo.io/json?token=<YOUR_TOKEN>')
+          .then(res => res.json())
+          .then(data => callback(data.country))
+          .catch(() => callback('us'));
+      },
+      separateDialCode: true
+    });
+  </script>
+
+  <script>
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const data = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
+    };
+
+    try {
+        const response = await fetch("http://localhost:3000/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (result.message) {
+            document.getElementById("successMessage").style.display = "block";
+            this.reset();
+        } else {
+            alert("Something went wrong. Try again.");
+        }
+
+    } catch (error) {
+        console.log(error);
+        alert("Server error. Try again later.");
+    }
+});
+</script>
+
+<footer>
+    <div class="footer-content">
+        <p data-en="© 2025 Illyrian Care Hospital. All rights reserved." data-es="© 2025 Hospital Illyrian Care. Todos los derechos reservados.">&copy; 2025 Illyrian Care Hospital. All rights reserved.</p>
+        <p data-en="Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com" data-es="Dirección: 742 Evergreen Lane | Teléfono: (832)-123-4567 | Correo: illyriancarehospital@gmail.com">Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com</p>
+        <ul class="social-links">
+            <li><a href="#" data-en="Facebook" data-es="Facebook">Facebook</a></li>
+            <li><a href="#" data-en="Instagram" data-es="Instagram">Instagram</a></li>
+            <li><a href="#" data-en="LinkedIn" data-es="LinkedIn">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+let user = localStorage.getItem("currentUser");
+
+let loginItem = document.getElementById("login-item");
+let userItem = document.getElementById("user-item");
+let userName = document.getElementById("user-name");
+
+if (user) {
+    if (loginItem) loginItem.style.display = "none";
+    if (userItem) userItem.style.display = "block";
+    if (userName) userName.innerText = "👤 " + user;
+} else {
+    if (loginItem) loginItem.style.display = "block";
+    if (userItem) userItem.style.display = "none";
+}
+</script>
+</body>
+</html>

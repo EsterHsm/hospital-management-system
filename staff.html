@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Illyrian Care Hospital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="staff.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="brand">
+        <img src="images/logo.png" alt="Illyrian Care Hospital Logo" class="logo-img">
+        <div class="logo-text">Illyrian Care Hospital</div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="departments.html" data-en="Medical Departments" data-es="Departamentos Médicos">Medical Departments</a></li>
+        <li><a href="staff.html" class="active" data-en="Staff & Doctors" data-es="Personal y Médicos">Staff & Doctors</a></li>
+        <li><a href="ourimpact.html" data-en="Our Impact" data-es="Nuestro Impacto">Our Impact</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li>
+            <li id="login-item">
+            <a href="login.html" class="profile-btn">
+                <img src="images/profile.jpg" alt="Profile" class="profile-icon"></a></li>
+            <a href="#" onclick="translatePage(currentLang === 'en' ? 'es' : 'en')">
+                <img id="lang-flag" src="images/spanish.png" alt="Flag" style="width:20px; height:15px; margin-right:5px;">
+                <span id="lang-btn" data-en="Español" data-es="English">Español</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+</header>
+
+<br><br>
+
+<section class="staff-hero">
+    <div class="staff-hero-inner">
+        <h1 data-en="Meet Our Medical Professionals" data-es="Conozca a Nuestros Profesionales Médicos">Meet Our Medical Professionals</h1>
+        <p data-en="Compassionate experts dedicated to your health and well-being." data-es="Expertos compasivos dedicados a su salud y bienestar.">Compassionate experts dedicated to your health and well-being.</p>
+    </div>
+</section>
+
+<br><br>
+
+<section class="staff-section">
+    <div class="staff-grid">
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/pediatrists.jpg" alt="Dr. Alice Johnson">
+            </div>
+            <h3 data-en="Dr. Alice Johnson, MD" data-es="Dra. Alice Johnson, MD">Dr. Alice Johnson, MD</h3>
+            <p data-en="Pediatrics" data-es="Pediatría">Pediatrics</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/neurologist.jpg" alt="Dr. Michelle Smith">
+            </div>
+            <h3 data-en="Dr. Michelle Smith, MD" data-es="Dra. Michelle Smith, MD">Dr. Michelle Smith, MD</h3>
+            <p data-en="Neurology" data-es="Neurología">Neurology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/dermatologist.jpg" alt="Dr. Sarah Lee">
+            </div>
+            <h3 data-en="Dr. Sarah Lee, MD" data-es="Dra. Sarah Lee, MD">Dr. Sarah Lee, MD</h3>
+            <p data-en="Dermatology" data-es="Dermatología">Dermatology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/surgeon.jpg" alt="Dr. James Wilson, DO">
+            </div>
+            <h3 data-en="Dr. James Wilson, DO" data-es="Dr. James Wilson, DO">Dr. James Wilson, DO</h3>
+            <p data-en="General Surgery" data-es="Cirugía General">General Surgery</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/radiologist.jpg" alt="Dr. Marcus Harlow, MD">
+            </div>
+            <h3 data-en="Dr. Marcus Harlow, MD" data-es="Dr. Marcus Harlow, MD">Dr. Marcus Harlow, MD</h3>
+            <p data-en="Gastroenterology" data-es="Gastroenterología">Gastroenterology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/orthopedist.jpg" alt="Dr. Liana Mercer, MD">
+            </div>
+            <h3 data-en="Dr. Liana Mercer, MD" data-es="Dra. Liana Mercer, MD">Dr. Liana Mercer, MD</h3>
+            <p data-en="Orthopedics" data-es="Ortopedia">Orthopedics</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/allergologist.jpg" alt="Dr. Olivia Raines, DO">
+            </div>
+            <h3 data-en="Dr. Olivia Raines, DO" data-es="Dra. Olivia Raines, DO">Dr. Olivia Raines, DO</h3>
+            <p data-en="Allergology" data-es="Alergología">Allergology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/lab service.png" alt="Dr. Victoria Alvarez, MD">
+            </div>
+            <h3 data-en="Dr. Victoria Alvarez, MD" data-es="Dra. Victoria Alvarez, MD">Dr. Victoria Alvarez, MD</h3>
+            <p data-en="Laboratory Services" data-es="Servicios de Laboratorio">Laboratory Services</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/cardiologist.jpg" alt="Dr. Naomi Winters, MD">
+            </div>
+            <h3 data-en="Dr. Naomi Winters, MD" data-es="Dra. Naomi Winters, MD">Dr. Naomi Winters, MD</h3>
+            <p data-en="Cardiology" data-es="Cardiología">Cardiology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/general-doc.png" alt="Dr. Julian Pierce, DO">
+            </div>
+            <h3 data-en="Dr. Julian Pierce, DO" data-es="Dr. Julian Pierce, DO">Dr. Julian Pierce, DO</h3>
+            <p data-en="General Doctor" data-es="Médico General">General Docotr</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/gynecologist.png" alt="Dr. Maya Ellington, MD">
+            </div>
+            <h3 data-en="Dr. Maya Ellington, MD" data-es="Dra. Maya Ellington, MD">Dr. Maya Ellington, MD</h3>
+            <p data-en="Gynecology" data-es="Ginecología">Gynecology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/pneumatolog.png" alt="Dr. Samuel Trent, MD">
+            </div>
+            <h3 data-en="Dr. Samuel Trent, MD" data-es="Dr. Samuel Trent, MD">Dr. Samuel Trent, MD</h3>
+            <p data-en="Pneumatology" data-es="Neumología">Pneumatology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/hematologist.jpg" alt="Dr. Elias Throne, MD">
+            </div>
+            <h3 data-en="Dr. Elias Throne, MD" data-es="Dr. Elias Throne, MD">Dr. Elias Throne, MD</h3>
+            <p data-en="Hematology" data-es="Hematología">Hematology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/optic.jpg" alt="Dr. Anya Sharma, MD">
+            </div>
+            <h3 data-en="Dr. Anya Sharma, DO" data-es="Dra. Anya Sharma, DO">Dr. Anya Sharma, DO</h3>
+            <p data-en="Ophthalmology" data-es="Oftalmología">Opthalmology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/endocrinologist.jpg" alt="Dr. Clara Bennett, DO">
+            </div>
+            <h3 data-en="Dr. Clara Bennett, DO" data-es="Dra. Clara Bennett, DO">Dr. Clara Bennett, DO</h3>
+            <p data-en="Endocrinology" data-es="Endocrinología">Endocrinology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+        <div class="staff-card">
+            <div class="staff-img-wrapper">
+                <img src="images/rheumatologist.jpg" alt="Dr. Damien Shore, DO">
+            </div>
+            <h3 data-en="Dr. Damien Shore, DO" data-es="Dr. Damien Shore, DO">Dr. Damien Shore, DO</h3>
+            <p data-en="Rheumatology" data-es="Reumatología">Rheumatology</p>
+            <div class="card-buttons">
+                <a href="#" class="details-btn" data-en="More Details" data-es="Más Detalles">More Details</a>
+                <a href="schedule.html" class="schedule-btn" data-en="Schedule Now" data-es="Agendar Ahora">Schedule Now</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p data-en="© 2025 Illyrian Care Hospital. All rights reserved." data-es="© 2025 Hospital Illyrian Care. Todos los derechos reservados.">&copy; 2025 Illyrian Care Hospital. All rights reserved.</p>
+        <p data-en="Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com" data-es="Dirección: 742 Evergreen Lane | Teléfono: (832)-123-4567 | Correo: illyriancarehospital@gmail.com">Address: 742 Evergreen Lane | Phone: (832)-123-4567 | Email: illyriancarehospital@gmail.com</p>
+        <ul class="social-links">
+            <li><a href="#" data-en="Facebook" data-es="Facebook">Facebook</a></li>
+            <li><a href="#" data-en="Instagram" data-es="Instagram">Instagram</a></li>
+            <li><a href="#" data-en="LinkedIn" data-es="LinkedIn">LinkedIn</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+let user = localStorage.getItem("currentUser");
+
+if (user) {
+    document.getElementById("login-item").style.display = "none";
+
+    let userItem = document.getElementById("user-item");
+    let userName = document.getElementById("user-name");
+
+    userItem.style.display = "block";
+    userName.innerText = "👤 " + user;
+}
+</script>
+
+</body>
+</html>

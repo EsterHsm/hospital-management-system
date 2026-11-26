@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="schedule.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Book an Appointment</h1>
+    <p>Please complete the form below. A staff member will confirm your appointment.</p>
+
+    <!-- SUCCESS MESSAGE BOX -->
+    <div id="success-message" class="success-message">
+        ✔ Your appointment request has been successfully submitted!  
+        We will contact you soon.
+    </div>
+
+    <form id="appointment-form" class="appointment-form">
+
+        <h3>Personal Information</h3>
+
+        <label>Full Name:</label>
+        <input type="text" id="name" required>
+
+        <label>Email Address:</label>
+        <input type="email" id="email" required>
+
+        <label>Phone Number:</label>
+        <input type="tel" id="phone" required>
+
+        <label>Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <label>Gender:</label>
+        <select id="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <h3>Appointment Details</h3>
+
+        <label>Preferred Date:</label>
+        <input type="date" id="date" required>
+
+        <label>Preferred Time:</label>
+        <input type="time" id="time" required>
+
+        <label>Reason for Visit:</label>
+        <textarea id="reason" required></textarea>
+
+        <button type="submit">Submit Appointment</button>
+    </form>
+</div>
+
+
+<script>
+document.getElementById("appointment-form").addEventListener("submit", async function(event) {
+    event.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        dob: document.getElementById("dob").value,
+        gender: document.getElementById("gender").value,
+        date: document.getElementById("date").value,
+        time: document.getElementById("time").value,
+        reason: document.getElementById("reason").value
+    };
+
+    try {
+        const response = await fetch("http://localhost:3000/appointment", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.text();
+
+        document.getElementById("success-message").style.display = "block";
+        document.getElementById("appointment-form").reset();
+
+    } catch (error) {
+        console.error(error);
+        alert("Error sending data");
+    }
+});
+</script>
+
+</body>
+</html>

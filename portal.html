@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>My Account - Illyrian Care Hospital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>s
+    <script>
+if (!localStorage.getItem("currentUser")) {
+    window.location.href = "index.html";
+}
+</script>
+
+<header>
+  <nav class="navbar">
+    <div class="brand">
+        <img src="images/logo.png" class="logo-img">
+        <div class="logo-text">Illyrian Care Hospital</div>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="departments.html" data-en="Medical Departments" data-es="Departamentos Médicos">Medical Departments</a></li>
+        <li><a href="staff.html" data-en="Staff & Doctors" data-es="Personal y Médicos">Staff & Doctors</a></li>
+        <li><a href="ourimpact.html" data-en="Our Impact" data-es="Nuestro Impacto">Our Impact</a></li>
+        <li><a href="contact.html" data-en="Contact" data-es="Contacto">Contact</a></li>
+
+        <!-- LOGIN -->
+        <li id="login-item">
+            <a href="login.html">
+                <img src="images/profile.jpg" class="profile-icon">
+            </a>
+        </li>
+
+        <!-- USER -->
+        <li id="user-item" class="user-dropdown" style="display:none;">
+            <a href="#" id="user-name" class="user-name"></a>
+
+            <div class="dropdown-content">
+                <a href="account.html" data-en="My Profile" data-es="Mi Perfil">My Profile</a>
+                <a href="#" id="logout-btn" data-en="Logout" data-es="Cerrar sesión">Logout</a>
+            </div>
+        </li>
+
+        <!--LANGUAGE BUTTON-->
+        <li>
+            <a href="#" onclick="translatePage(currentLang === 'en' ? 'es' : 'en')">
+                <img id="lang-flag" src="images/spanish.png" style="width:20px; height:15px; margin-right:5px;">
+                <span id="lang-btn" data-en="Español" data-es="English">Español</span>
+            </a>
+        </li>
+    </ul>
+  </nav>
+</header>
+
+<!-- DASHBOARD -->
+<div class="dashboard-container">
+
+    <aside class="sidebar">
+        <ul>
+            <li class="active">
+                <span class="icon">🏠</span>
+                <span data-en="Home" data-es="Inicio">Home</span></li>
+
+            <li>
+            <a href="https://forms.office.com/r/GwCc8c94mN?origin=lprLink" target="_blank">
+            <span class="icon">📅</span>
+            <span data-en="Appointments" data-es="Citas">Appointments</span>
+            </a></li>
+
+            <li>
+            <span class="icon">💳</span>
+            <span data-en="Billing & Payments" data-es="Facturación y Pagos">Billing & Payments</span></li>
+
+            <li>
+                <span class="icon">💬</span>
+                <span data-en="Messages" data-es="Mensajes">Messages</span></li>
+
+            <li>
+                <span class="icon">❤️</span>
+                <span data-en="My Health" data-es="Mi Salud">My Health</span></li>
+
+            <li>
+                <span class="icon">🧪</span>
+                <span data-en="Test Results" data-es="Resultados">Test Results</span></li>
+
+            <li>
+                <span class="icon">📄</span>
+                <span data-en="Documents" data-es="Documentos">Documents</span></li>
+        </ul>
+    </aside>
+
+    <main class="dashboard-content">
+
+        <div class="portal">
+            <div class="portal-row">
+                <p data-en="You have no upcoming appointments." 
+                   data-es="No tiene citas próximas.">
+                   You have no upcoming appointments.
+                </p>
+                <a href="https://forms.office.com/r/GwCc8c94mN?origin=lprLink"
+                target="_blank"
+                class="btn btn-primary"
+                data-en="Schedule Now"
+                data-es="Agendar Ahora">
+                Schedule Now
+                </a>     
+            </div>
+        </div>
+
+        <h2 data-en="Messages" data-es="Mensajes">Messages</h2>
+
+        <div class="portal">
+            <div class="portal-row">
+                <p data-en="Have a question for your care team?"
+                   data-es="¿Tiene una pregunta para su equipo médico?">
+                   Have a question for your care team?
+                </p>
+                <button class="btn btn-primary"
+                        data-en="Send a Message"
+                        data-es="Enviar Mensaje">
+                        Send a Message
+                </button>
+            </div>
+        </div>
+
+        <h2 data-en="Billing Summary" data-es="Resumen de Facturación">Billing Summary</h2>
+
+        <div class="portal">
+            <div class="portal-row">
+                <p data-en="You don't have any bills due."
+                data-es="No tiene facturas pendientes.">
+                You don't have any bills due.
+                </p>
+        </div>
+        </div>
+
+        <h2 data-en="Patient satisfaction Survey" data-es="Encuesta de satisfacción del paciente">Patient satisfaction Survey</h2>
+
+        <div class="portal">
+            <div class="portal-row">
+                <p data-en="Please take a moment to complete our patient satisfaction survey." 
+                   data-es="Por favor, tómese un momento para completar nuestra encuesta de satisfacción del paciente.">
+                   Please take a moment to complete our patient satisfaction survey.
+                </p>
+                <a href="https://forms.cloud.microsoft/r/G07tKU18iE"
+                target="_blank"
+                class="btn btn-primary"
+                data-en="Take Survey"
+                data-es="Comenzar Encuesta">
+                Take Survey
+                </a>     
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<!-- SCRIPTS -->
+<script src="script.js"></script>
+
+<script>
+// PROTECT PAGE (RUN FIRST)
+const user = localStorage.getItem("currentUser");
+
+if (!user) {
+    window.location.replace("index.html"); // force redirect
+}
+
+// SHOW USER
+if (user) {
+    document.getElementById("login-item").style.display = "none";
+
+    let userItem = document.getElementById("user-item");
+    let userName = document.getElementById("user-name");
+
+    userItem.style.display = "block";
+    userName.innerText = "👤 " + user;
+}
+
+// LOGOUT
+document.getElementById("logout-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    localStorage.removeItem("currentUser");
+
+    //redirect
+    window.location.href = "index.html";
+});
+
+</script>
+
+</body>
+</html>
